@@ -1,0 +1,28 @@
+Sepal Lenght:
+  Mean: 5.84
+  Min: 4.30
+  Max: 7.90
+  Std: 0.83
+  Median: 5.80
+
+Sepal Width:
+  Mean: 3.06
+  Min: 2.00
+  Max: 4.40
+  Std: 0.44
+  Median: 3.00
+
+Petal Length:
+  Mean: 3.76
+  Min: 1.00
+  Max: 6.90
+  Std: 1.77
+  Median: 4.35
+
+Petal Width:
+  Mean: 1.20
+  Min: 0.10
+  Max: 2.50
+  Std: 0.76
+  Median: 1.30
+
