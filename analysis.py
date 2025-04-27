@@ -2,8 +2,11 @@
 # Save a histogram of each variable to png files
 # Output a scatter plot of each pair of variables
 
-# Import Pandas Library
+# Import All Relevant Libraries
 import pandas as pd 
+import numpy as np 
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
 
 # Load the iris.csv file into program
 data = pd.read_csv('iris.csv')
@@ -60,11 +63,6 @@ print("Summary to summary.txt")
 
 # 2. Save a histogram of each variable to png files
 
-# Import numpy and matplotlib for histogram generation
-import numpy as np 
-import matplotlib.pyplot as plt
-from sklearn.datasets import load_iris
-
 # Load the Dataset
 iris = load_iris()
 data = iris.data 
@@ -88,8 +86,30 @@ for i in range(len(feature_names)):
 
 # Use feature_names to get name of current feature
 # Use replace to change all spaces into underscores, remove any opening and closing brackets
-    safe_name = feature_names[i].replace(" ", "_").replace("(", "").replace(")", "")
+    safe_name = feature_names[i].replace(" ", "_").replace("(", "").replace(")", "") 
 # Use F-string to insert variable into saved file eg:sepal length    
-    plt.savefig(f'{safe_name}_file.png')
+    plt.savefig(f'{safe_name}_histogram.png') 
+    print(safe_name + ' to '+ safe_name + '_histogram.png')
+    plt.clf()
     
 # 3. Output a scatter plot of each pair of variables. 
+
+# Load Iris
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+features = iris.feature_names
+
+
+for i in range(len(features)):
+        for j in range(i + 1, len(features)):
+                x_label = features[i]
+                y_label = features[j]
+
+                plt.scatter(df[x_label], df[y_label], color='green', edgecolor='black', alpha=0.8)
+                plt.xlabel(x_label)
+                plt.ylabel(y_label)
+                plt.title(f'{x_label} v {y_label}')
+                plt.grid(True)
+        
+                plt.savefig(f'{x_label}_vs_{y_label}.png')
+                plt.clf()
+
