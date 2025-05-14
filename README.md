@@ -22,3 +22,10 @@ It helps us determine which species a flower belongs to, based on the size of it
 This dataset was designed to predict the species of an Iris flower 
 The dataset is approximated by the closest tree with some penalty for the excessive number of nodes, bending and stretching.
 A technique called linear discriminant analysis can be used to accurately distinguish the 3 species from one another using only the sepal and petal measurements.
+
+All References used: 
+Reference: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html
+Reference: https://www.w3schools.com/python/matplotlib_pyplot.asp
+Reference: https://www.w3schools.com/python/pandas/pandas_dataframe
+Reference: https://www.w3schools.com/python/matplotlib_scatter.asp
+Reference: https://www.w3schools.com/python/numpy/numpy_random_seaborn.asp
